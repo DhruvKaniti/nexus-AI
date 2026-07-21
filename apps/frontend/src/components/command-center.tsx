@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import {
-  ArrowRight, Bot, BrainCircuit, Clock3, MapPin, Plus, ScanLine, Target, Globe,
-  Globe2, Shield, AlertTriangle, Building2, Landmark,
-  Wifi, Heart, X
+  Bot, Clock3, MapPin, Plus, ScanLine, Target, Globe,
+Globe2, Shield, AlertTriangle, Building2, Landmark,
+Wifi, Heart, X
 } from 'lucide-react'
 import { Skeleton } from '@/components/ui/skeleton'
 import { LeafletMap } from '@/components/leaflet-map'
