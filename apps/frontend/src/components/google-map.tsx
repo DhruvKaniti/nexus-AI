@@ -28,7 +28,7 @@ const colorMap = {
   violet: { color: '#a78bfa', bgColor: 'rgba(167, 139, 250, 0.2)' },
 }
 
-export function GoogleMap({ crises, onSelectCrisis, scanningCrisis }: GoogleMapProps)
+export function GoogleMap({ crises, onSelectCrisis, scanningCrisis }: GoogleMapProps){
   const mapRef = useRef<HTMLDivElement>(null)
   const [map, setMap] = useState<google.maps.Map | null>(null)
   const [markers, setMarkers] = useState<google.maps.Marker[]>([])
