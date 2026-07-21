@@ -11,7 +11,7 @@ import { IncidentHeader } from '@/components/IncidentHeader'
 import { SituationOverview } from '@/components/SituationOverview'
 import { AgentPipeline } from '@/components/AgentPipeline'
 import { LiveFindings } from '@/components/LiveFindings'
-
+import { NexusResponse } from '@/components/NexusRecommendation'
 const ease = [0.22, 1, 0.36, 1] as const
 const API_URL = '/api'
 
@@ -187,22 +187,7 @@ function IntelligenceFeed() {
   )
 }
 
-function RecommendationPanel() {
-  return (
-    <div className="relative overflow-hidden rounded-xl border border-cyan-300/[0.12] bg-cyan-400/[0.045] p-4">
-      <div className="flex gap-3">
-        <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-cyan-400/[0.12] text-cyan-300">
-          <BrainCircuit size={17} />
-        </span>
-        <p className="text-xs leading-5 text-slate-300">Pre-position alternative shipping capacity for high-value routes transiting the Gulf within the next 12 hours.</p>
-      </div>
-      <div className="mt-4 flex items-center justify-between border-t border-white/[0.07] pt-3">
-        <span className="text-[11px] text-slate-500">Confidence <strong className="ml-1 font-medium text-cyan-300">87%</strong></span>
-        <button className="flex items-center gap-1 text-xs font-medium text-cyan-300 hover:text-cyan-200">Review actions <ArrowRight size={13} /></button>
-      </div>
-    </div>
-  )
-}
+
 
 function ReasoningPanel() {
   return (
