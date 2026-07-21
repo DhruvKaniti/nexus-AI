@@ -669,7 +669,7 @@ export function CommandCenter() {
     {/* Main Grid: Map + Intelligence Briefing */}
     <div className="grid gap-5">
       <motion.div variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } } }}>
-        <LeafletMap onSelectCrisis={setSelectedItem} crises={items.map(i => ({ title: i.title, place: i.location, severity: i.severity, tone: getCategoryColor(i.balanced_category), time: i.time, icon: i.icon, lat: i.lat, lng: i.lng }))} scanningCrisis={scanningItem} selectedCrisis={selectedItem} />
+        <LeafletMap onSelectCrisis={setSelectedItem} crises={items.map(i => ({ title: i.title, place: i.location, severity: i.severity, tone: getCategoryColor(i.balanced_category), time: i.time, icon: i.icon, lat: i.lat, lng: i.lng }))} scanningCrisis={scanningItem} />
       </motion.div>
       <motion.div variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease } } }} className="space-y-5">
         <div>

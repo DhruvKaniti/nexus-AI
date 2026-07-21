@@ -1,8 +1,7 @@
-  import { useEffect, useMemo, useRef, useState } from 'react'
+  import { useEffect, useMemo, useState } from 'react'
   import { motion } from 'framer-motion'
   import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
   import L from 'leaflet'
-  import { MapPin, AlertTriangle } from 'lucide-react'
 
   // Haversine distance calculation for clustering
   function haversineDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
@@ -37,7 +36,6 @@
   interface LeafletMapProps {
     crises: Crisis[]
     onSelectCrisis: (index: number) => void
-    selectedCrisis: number | null
     scanningCrisis?: { x: string; y: string } | null
   }
 
@@ -165,7 +163,7 @@
   ]
 
   // Component to handle map view changes and scanning animation
-  function MapViewController({ center, zoom, crises, scanningCrisis }: { 
+  function MapViewController({ center, zoom, crises }: { 
     center: [number, number]; 
     zoom: number; 
     crises: any[];
@@ -260,15 +258,14 @@
     return null
   }
 
-  export function LeafletMap({ crises, onSelectCrisis, selectedCrisis, scanningCrisis }: LeafletMapProps) {
+  export function LeafletMap({ crises, onSelectCrisis, scanningCrisis }: LeafletMapProps) {
     const defaultCenter: [number, number] = [20, 0]
-    const defaultZoom = 2
     const [isMapReady, setIsMapReady] = useState(false)
     const [isRadarActive, setIsRadarActive] = useState(true)
     
     // Stop radar after markers are loaded
     useEffect(() => {
-      if (crises.length > 0 && isMapReady) {
+      if (crises.length > 0 && isMapReady) {  
         const timer = setTimeout(() => {
           setIsRadarActive(false)
         }, 5000) // Stop radar after 5 seconds once map is ready with data
@@ -415,7 +412,6 @@
           {clusteredCrises.map((cluster, clusterIndex) => {
             const primaryCrisis = cluster.crises[0]
             const colors = colorMap[primaryCrisis.tone as keyof typeof colorMap] || colorMap.blue
-            const isCluster = cluster.crises.length > 1
             
                   if (
           typeof cluster.lat !== "number" ||
