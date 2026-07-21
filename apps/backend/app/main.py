@@ -5,13 +5,16 @@ import logging
 import re
 
 app = Flask(__name__)
-CORS(app, origins=[
-    "http://localhost:5173",
-    "http://localhost:3000",
-    "http://localhost:5174",
-    "https://nexus-ai-gamma-drab.vercel.app",
-])
-# Register routes with /api prefix
+
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "https://nexus-ai-gamma-drab.vercel.app",
+            "http://localhost:5173",
+            "http://localhost:3000"
+        ]
+    }
+})# Register routes with /api prefix
 app.register_blueprint(investigate.bp, url_prefix='/api')
 app.register_blueprint(global_scan.bp, url_prefix='/api')
 
