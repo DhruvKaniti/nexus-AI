@@ -9,7 +9,7 @@ CORS(app, origins=[
     "http://localhost:5173",
     "http://localhost:3000",
     "http://localhost:5174",
-    re.compile(r"https://nexus-.*\.vercel\.app"),
+    "https://nexus-7sdss8vor-dhruvkanitis-projects.vercel.app/",
 ])
 # Register routes with /api prefix
 app.register_blueprint(investigate.bp, url_prefix='/api')
