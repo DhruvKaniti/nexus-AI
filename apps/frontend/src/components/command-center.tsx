@@ -13,7 +13,7 @@ import { AgentPipeline } from '@/components/AgentPipeline'
 import { LiveFindings } from '@/components/LiveFindings'
 import { NexusResponse } from '@/components/NexusRecommendation'
 const ease = [0.22, 1, 0.36, 1] as const
-const API_URL = '/api'
+const API_URL = import.meta.env.VITE_API_BASE_URL || '/api'
 
 // No hardcoded events - all events will be fetched from the live API
 
