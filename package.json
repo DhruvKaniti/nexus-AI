@@ -1,0 +1,16 @@
+{
+  "name": "nexus",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/frontend"],
+  "scripts": {
+    "dev": "concurrently -n frontend,backend -c cyan,magenta \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "npm run dev --workspace @nexus/frontend",
+    "dev:backend": "cd apps/backend && set FLASK_APP=app.main && flask run --port 8000",
+    "build": "npm run build --workspace @nexus/frontend",
+    "lint": "npm run lint --workspace @nexus/frontend",
+    "format": "npm run format --workspace @nexus/frontend",
+    "format:check": "npm run format:check --workspace @nexus/frontend"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}

@@ -1,0 +1,36 @@
+{
+  "agents": [
+    {
+      "name": "Satellite Intelligence Agent",
+      "finding": "Satellite analysis of Bangladesh shows activity patterns consistent with major flooding in southeast asia.",
+      "confidence": 75,
+      "risk": "High"
+    },
+    {
+      "name": "News Intelligence Agent",
+      "finding": "News sources report developments related to Major Flooding in Southeast Asia in Bangladesh.",
+      "confidence": 70,
+      "risk": "Medium"
+    },
+    {
+      "name": "Supply Chain Agent",
+      "finding": "Supply chain routes near Bangladesh may be affected by major flooding in southeast asia.",
+      "confidence": 72,
+      "risk": "High"
+    },
+    {
+      "name": "Economic Impact Agent",
+      "finding": "Economic analysis suggests Major Flooding in Southeast Asia could impact regional operations.",
+      "confidence": 68,
+      "risk": "Medium"
+    },
+    {
+      "name": "Recommendation Agent",
+      "finding": "Analysis complete. Multiple factors require monitoring.",
+      "confidence": 70,
+      "risk": "High",
+      "reasoning": "Using fallback analysis due to API limitations.",
+      "recommendation": "Continue monitoring Bangladesh and prepare contingency protocols for major flooding in southeast asia."
+    }
+  ]
+}
