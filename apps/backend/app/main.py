@@ -2,10 +2,15 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from app.api import investigate, global_scan
 import logging
+import re
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173", "http://localhost:3000", "http://localhost:5174"])
-
+CORS(app, origins=[
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "http://localhost:5174",
+    re.compile(r"https://nexus-.*\.vercel\.app"),
+])
 # Register routes with /api prefix
 app.register_blueprint(investigate.bp, url_prefix='/api')
 app.register_blueprint(global_scan.bp, url_prefix='/api')
