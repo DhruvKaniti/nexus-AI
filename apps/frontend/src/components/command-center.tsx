@@ -11,7 +11,6 @@ import { IncidentHeader } from '@/components/IncidentHeader'
 import { SituationOverview } from '@/components/SituationOverview'
 import { AgentPipeline } from '@/components/AgentPipeline'
 import { LiveFindings } from '@/components/LiveFindings'
-import { NexusResponse } from '@/components/NexusRecommendation'
 
 const ease = [0.22, 1, 0.36, 1] as const
 const API_URL = '/api'

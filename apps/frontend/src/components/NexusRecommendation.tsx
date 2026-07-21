@@ -32,20 +32,6 @@ export function NexusResponse({
     }
   }
 
-  const getPriorityBg = (priority: string) => {
-    switch (priority) {
-      case 'CRITICAL':
-        return 'bg-red-400/[0.1]'
-      case 'HIGH':
-        return 'bg-amber-400/[0.1]'
-      case 'MODERATE':
-        return 'bg-blue-400/[0.1]'
-      case 'LOW':
-        return 'bg-emerald-400/[0.1]'
-      default:
-        return 'bg-slate-400/[0.1]'
-    }
-  }
 
   const getCategoryLabel = (category: string) => {
     switch (category) {

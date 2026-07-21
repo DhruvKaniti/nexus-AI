@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Loader } from '@googlemaps/js-api-loader'
 import { motion } from 'framer-motion'
-import { MapPin, AlertTriangle, Users, Radio } from 'lucide-react'
+import { MapPin, AlertTriangle} from 'lucide-react'
 
 interface Crisis {
   title: string

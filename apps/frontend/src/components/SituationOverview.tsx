@@ -1,4 +1,4 @@
-import { AlertTriangle, Clock, Shield, Zap } from 'lucide-react'
+import { Clock, Shield, Zap } from 'lucide-react'
 import { Panel } from '@/components/ui/panel'
 import { StatusPill } from '@/components/ui/status-pill'
 

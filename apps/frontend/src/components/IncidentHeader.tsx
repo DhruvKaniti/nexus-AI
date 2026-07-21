@@ -1,5 +1,4 @@
-import { type ReactNode } from 'react'
-import { Shield, MapPin, AlertTriangle, Activity, Radio } from 'lucide-react'
+import { Shield, MapPin, Activity, Radio } from 'lucide-react'
 import { Panel } from '@/components/ui/panel'
 import { StatusPill } from '@/components/ui/status-pill'
 
