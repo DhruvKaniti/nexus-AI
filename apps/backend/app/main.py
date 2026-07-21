@@ -18,6 +18,10 @@ CORS(app, resources={
 app.register_blueprint(investigate.bp, url_prefix='/api')
 app.register_blueprint(global_scan.bp, url_prefix='/api')
 
+@app.route('/')
+def home():
+    return jsonify({"status": "Nexus AI backend running"})
+
 @app.route('/health')
 def health_check():
     return jsonify({"status": "ok"})
@@ -32,6 +36,8 @@ def handle_exception(e):
         "error_type": type(e).__name__,
         "api_version": "2.1"
     }), 500
+
+
 
 @app.errorhandler(404)
 def not_found(e):
