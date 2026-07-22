@@ -1,5 +1,7 @@
 # Nexus AI
 
+![Nexus Logo](public/nexus-logo.svg)
+
 > An AI-powered global intelligence platform for monitoring, investigating, and understanding world events.
 
 ---
